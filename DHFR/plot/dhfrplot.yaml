@@ -1,0 +1,21 @@
+aligned_msa_filename: mDHFR_clean.fasta.gz
+reweighting_threshold: 0.8
+
+# These directories need to be specified relative to the main directory
+dataset_dir: sequence_sets
+working_dir: working
+
+model_name: mDHFR_clean
+
+hidden_layer_size: 400
+#latent_layer_size must be 2 to make a 2d plot of the latent space
+latent_layer_size: 2
+activation_function: sigmoid
+learning_rate: .001
+epochs: 300
+batch_size: 128
+device: auto
+
+
+# Plotting options
+latent_plot_output_filename: mDHFR_clean_latent.png

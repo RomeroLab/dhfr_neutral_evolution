@@ -1,0 +1,15 @@
+Round1_Q15_C10_aa.aln.gz
+	Num sequences: 10944
+	Avg sim to WT: 99.55%
+Round2_Q15_C10_aa.aln.gz
+	Num sequences: 9029
+	Avg sim to WT: 99.13%
+Round3_Q15_C10_aa.aln.gz
+	Num sequences: 6168
+	Avg sim to WT: 98.71%
+Round4_Q15_C10_aa.aln.gz
+	Num sequences: 11213
+	Avg sim to WT: 98.43%
+Round5_Q15_C10_aa.aln.gz
+	Num sequences: 6208
+	Avg sim to WT: 98.19%

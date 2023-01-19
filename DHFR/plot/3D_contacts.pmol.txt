@@ -1,0 +1,60 @@
+fetch 3k47
+
+one_letter ={'VAL':'V', 'ILE':'I', 'LEU':'L', 'GLU':'E', 'GLN':'Q', \
+'ASP':'D', 'ASN':'N', 'HIS':'H', 'TRP':'W', 'PHE':'F', 'TYR':'Y',    \
+'ARG':'R', 'LYS':'K', 'SER':'S', 'THR':'T', 'MET':'M', 'ALA':'A',    \
+'GLY':'G', 'PRO':'P', 'CYS':'C'}
+
+hide all
+
+bg_color white
+
+show cartoon, 3k47
+#cartoon automatic, 3k47 
+#cartoon loop, 3k47 # if we do not want helices colored
+
+
+color white, /3k47/A/A/1-186 
+
+color red, /3k47/A/A/10+65+71
+
+color blue, /3k47/A/A/16-22
+color blue, /3k47/A/A/55-57
+color blue, /3k47/A/A/77-79
+color blue, /3k47/A/A/117-124
+
+
+set dash_radius, 0.2
+set dash_width, 1/
+set dash_round_ends, 1
+set dash_gap, 0.4
+set dash_color, lightblue
+
+set label_size, 20
+
+
+python
+
+epistatic_residues = [(71, 117), (25, 71), (71, 114), (58, 71), (25, 117), (25, 114), (25, 58), (67, 117), (58, 117), (58, 114)]
+
+
+for ei, (i, j) in enumerate(epistatic_residues):
+    i = i - 1
+    j = j - 1
+    dist_string = f"dist{ei+1:02d}"
+    cmd.distance(dist_string, f"/3k47/A/A/{i}/CA", f"/3k47/A/A/{j}/CA")
+    cmd.hide("labels", dist_string)
+    cmd.label(f"/3k47/A/A/{i}/CA", '"%s%s" %( one_letter[resn], str(int(resi) + 1))')
+    cmd.label(f"/3k47/A/A/{j}/CA", '"%s%s" %( one_letter[resn], str(int(resi) + 1))')
+
+python end
+
+
+# rotate
+
+# change z-order of labels
+set label_position,(0,-1,14)
+
+set ray_trace_fog, 0
+set depth_cue,  0
+

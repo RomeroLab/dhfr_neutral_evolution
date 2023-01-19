@@ -1,0 +1,20 @@
+##### Second script for coloring the pdb file according to the average mutation effect
+fetch 3k47
+
+hide all
+bg_color white
+show cartoon, 3k47
+
+alter 3k47, b=0.0
+
+lines = [line.strip() for line in open("/Users/sameer/tmp/mutation_prediction_averaged.csv")]
+avg_muts = [float(l.split(",")[2]) for l in lines[1:]]
+
+alter 3k47 and n. CA, b=avg_muts.pop(0)
+cmd.spectrum("b", "blue_red", "3k47 and n. CA")
+
+set ray_trace_fog, 0
+set depth_cue,  0
+
+png /Users/sameer/tmp/mutation_prediction_averaged.png, 0, 0, -1, ray=1
+

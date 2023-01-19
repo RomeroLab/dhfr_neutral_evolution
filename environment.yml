@@ -1,0 +1,31 @@
+name: dhfr_analysis
+channels:
+  - pytorch
+  - defaults
+  - r
+  - conda-forge
+  - bioconda
+dependencies:
+  - biopython
+  - conda-forge::scikit-bio
+  - bioconda::flash
+  - bioconda::msms
+  - joblib
+  - matplotlib
+  - notebook
+  - numpy
+  - pandas
+  - conda-forge::pybind11
+  - python=3.8
+  - pytorch=1.6
+  - scikit-learn
+  - scipy
+  - seaborn
+  - tqdm
+  - pyyaml
+#  - r::r-irkernel
+#  - r::r-matrix 
+#  - r::r-foreach 
+#  - r::r-reticulate
+#  - r::r-corpcor
+#  - conda-forge::r-numderiv

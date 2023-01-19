@@ -1,0 +1,10 @@
+A*/
+.DS_Store
+.R*
+._*
+*.npy.npz
+*.npy
+*.swp
+staging.tar.gz
+docker_stderror
+.ipynb_checkpoints

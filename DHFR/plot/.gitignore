@@ -1,0 +1,5 @@
+*.pkl
+adaptive_walks_*.txt
+adaptive_walks_*.pkl
+sample_latent_points_seqs.txt
+shortest_path.*
